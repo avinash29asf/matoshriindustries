@@ -93,7 +93,7 @@ header{
 }
 
 .logo-img{
-    height:80px;
+    height:100px;
     width:auto;
     display:block;
     transition:transform 0.2s;
@@ -347,7 +347,7 @@ section{
 
 .service-card .icon{
     width:60px;
-    height:60px;
+        height:80px;
     margin:0 auto 16px;
     background:var(--orange);
     border-radius:12px;
