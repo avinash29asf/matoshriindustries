@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://matoshrindustries.com/sitemap.xml
+Sitemap: https://avinash29asf.github.io/matoshriindustries/sitemap.xml
