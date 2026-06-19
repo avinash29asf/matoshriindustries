@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - Matoshri Industries | Ceramics, Casting & Metallurgy Kolhapur</title>
+<meta name="description" content="Professional ceramics & pottery, metal casting & forging, furnace linings and fettling services in Kolhapur.">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Matoshri Industries" class="logo-img"></a>
+    </div>
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;">
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle Theme">&#9790;</button>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<section class="hero" style="min-height:50vh;padding:140px 5% 80px;">
+    <div class="hero-content">
+        <h1>Our <span>Services</span></h1>
+        <p>Comprehensive ceramics, casting & metallurgy solutions for all industrial needs.</p>
+    </div>
+</section>
+
+<section class="services">
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="icon">&#127912;</div>
+            <h3>Ceramics & Pottery</h3>
+            <p>Manufacturing of high-quality ceramic products, pottery items, refractory ceramics and industrial ceramic components for various applications.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#128293;</div>
+            <h3>Metal Casting</h3>
+            <p>Professional metal casting services including sand casting, die casting and investment casting for industrial components using precision molds.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#9874;</div>
+            <h3>Metal Forging</h3>
+            <p>Expert hot and cold forging services for manufacturing high-strength metal components, tools, and industrial parts.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#9881;</div>
+            <h3>Fettling Services</h3>
+            <p>Expert fettling, grinding and finishing of castings including removal of gates, risers, excess metal and surface finishing.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#128296;</div>
+            <h3>Furnace Linings</h3>
+            <p>Specialist metallurgical furnace lining solutions including refractory brick installation, monolithic linings, repairs and maintenance.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#9871;</div>
+            <h3>Metallurgy Services</h3>
+            <p>Metallurgical testing, heat treatment, material analysis and quality assurance for metals, ceramics and alloy components.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>Industries We <span>Serve</span></h2>
+    </div>
+    <div class="brands-grid">
+        <div class="brand-item">Ceramics</div>
+        <div class="brand-item">Foundry & Casting</div>
+        <div class="brand-item">Metallurgy</div>
+        <div class="brand-item">Forging</div>
+        <div class="brand-item">Pottery & Tiles</div>
+        <div class="brand-item">Steel & Alloys</div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Get a Quote</h2>
+    <p>Call 9284267421 or visit our facility for professional ceramics, casting & metallurgy services.</p>
+    <a href="contact.html" class="btn">Contact Now</a>
+</section>
+
+<footer>
+    <p class="brand">Matoshri Industries</p>
+    <p>&#128222; 9284267421 | 9922980166</p>
+    <p>Gat No.197, Shed No.2, Madhav Nagar, Madhav Nagar Road, Kaneriwadi, Karvir, Kolhapur - 416234</p>
+    <p>&copy; Matoshri Industries &mdash; Quality in Ceramics, Casting & Metallurgy</p>
+</footer>
+
+<a href="https://wa.me/919284267421" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">&#128242;</a>
+
+<script>
+function toggleMenu(){
+    var nav = document.getElementById('navMenu');
+    var btn = document.querySelector('.menu-toggle');
+    nav.classList.toggle('active');
+    btn.classList.toggle('active');
+}
+document.querySelectorAll('#navMenu a').forEach(function(l){
+    l.addEventListener('click',function(){
+        document.getElementById('navMenu').classList.remove('active');
+        document.querySelector('.menu-toggle').classList.remove('active');
+    });
+});
+function toggleTheme(){
+    var html = document.documentElement;
+    var btn = document.getElementById('themeBtn');
+    if(html.getAttribute('data-theme')==='dark'){
+        html.removeAttribute('data-theme');
+        btn.innerHTML='&#9790;';
+        localStorage.setItem('theme','light');
+    }else{
+        html.setAttribute('data-theme','dark');
+        btn.innerHTML='&#9728;';
+        localStorage.setItem('theme','dark');
+    }
+}
+(function(){
+    var saved=localStorage.getItem('theme');
+    if(saved==='dark'){
+        document.documentElement.setAttribute('data-theme','dark');
+        document.getElementById('themeBtn').innerHTML='&#9728;';
+    }
+})();
+</script>
+</body>
+</html>

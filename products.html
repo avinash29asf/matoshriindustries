@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Matoshri Industries | Ceramics, Castings & Metallurgy Products Kolhapur</title>
+<meta name="description" content="Browse our products - Ceramic products, metal castings, forged components, refractory materials and metallurgy supplies in Kolhapur.">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="Matoshri Industries" class="logo-img"></a>
+    </div>
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;">
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Toggle Theme">&#9790;</button>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<section class="hero" style="min-height:50vh;padding:140px 5% 80px;">
+    <div class="hero-content">
+        <h1>Our <span>Products</span></h1>
+        <p>High-quality ceramic products, metal castings, forged parts & refractory materials.</p>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <h2>What We <span>Manufacture</span></h2>
+        <p>Quality industrial products at competitive prices</p>
+    </div>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="icon">&#127912;</div>
+            <h3>Ceramic Products</h3>
+            <p>High-quality ceramic items including refractory bricks, tiles, crucibles, pottery and industrial ceramic components.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#128293;</div>
+            <h3>Metal Castings</h3>
+            <p>Precision metal castings including steel, iron, aluminum and alloy castings for industrial machinery and equipment.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#9874;</div>
+            <h3>Forged Components</h3>
+            <p>High-strength forged metal components, tools, shafts, flanges and custom forged parts for heavy industry.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#128296;</div>
+            <h3>Refractory Materials</h3>
+            <p>Refractory bricks, monolithic refractories, castables, ceramic fiber products and furnace lining materials.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#9881;</div>
+            <h3>Fettled Castings</h3>
+            <p>Finished and fettled castings with clean surfaces, removed gates/risers and precision-ground finishing.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon">&#9871;</div>
+            <h3>Heat-Treated Parts</h3>
+            <p>Metallurgically tested and heat-treated components with certified quality for demanding applications.</p>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="section-title">
+        <h2>Materials & <span>Products</span></h2>
+        <p>Specialists in multiple materials and product types</p>
+    </div>
+    <div class="brands-grid">
+        <div class="brand-item">Ceramics</div>
+        <div class="brand-item">Cast Iron</div>
+        <div class="brand-item">Steel & Alloys</div>
+        <div class="brand-item">Aluminum</div>
+        <div class="brand-item">Refractories</div>
+        <div class="brand-item">Brass & Copper</div>
+        <div class="brand-item">Forged Steel</div>
+        <div class="brand-item">Pottery & Tiles</div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Need Ceramics, Castings or Metallurgy Products?</h2>
+    <p>Call us at 9284267421 to discuss your requirements. We deliver quality industrial products.</p>
+    <a href="contact.html" class="btn">Contact Now</a>
+</section>
+
+<footer>
+    <p class="brand">Matoshri Industries</p>
+    <p>&#128222; 9284267421 | 9922980166</p>
+    <p>Gat No.197, Shed No.2, Madhav Nagar, Madhav Nagar Road, Kaneriwadi, Karvir, Kolhapur - 416234</p>
+    <p>&copy; Matoshri Industries &mdash; Quality in Ceramics, Casting & Metallurgy</p>
+</footer>
+
+<a href="https://wa.me/919284267421" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">&#128242;</a>
+
+<script>
+function toggleMenu(){
+    var nav = document.getElementById('navMenu');
+    var btn = document.querySelector('.menu-toggle');
+    nav.classList.toggle('active');
+    btn.classList.toggle('active');
+}
+document.querySelectorAll('#navMenu a').forEach(function(l){
+    l.addEventListener('click',function(){
+        document.getElementById('navMenu').classList.remove('active');
+        document.querySelector('.menu-toggle').classList.remove('active');
+    });
+});
+function toggleTheme(){
+    var html = document.documentElement;
+    var btn = document.getElementById('themeBtn');
+    if(html.getAttribute('data-theme')==='dark'){
+        html.removeAttribute('data-theme');
+        btn.innerHTML='&#9790;';
+        localStorage.setItem('theme','light');
+    }else{
+        html.setAttribute('data-theme','dark');
+        btn.innerHTML='&#9728;';
+        localStorage.setItem('theme','dark');
+    }
+}
+(function(){
+    var saved=localStorage.getItem('theme');
+    if(saved==='dark'){
+        document.documentElement.setAttribute('data-theme','dark');
+        document.getElementById('themeBtn').innerHTML='&#9728;';
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Robots.txt for Matoshri Industries
+User-agent: *
+Allow: /
+
+Sitemap: https://matoshrindustries.com/sitemap.xml
